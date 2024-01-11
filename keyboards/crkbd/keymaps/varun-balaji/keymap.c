@@ -33,13 +33,17 @@
 // Right-hand home row mods
 #define SFT_J RSFT_T(KC_J)
 #define CTL_K RCTL_T(KC_K)
-#define ALT_L LALT_T(KC_L)
+#define ALT_L RALT_T(KC_L)
 #define GUI_SCL RGUI_T(KC_SCLN)
 // Additional binds for apple layer, swapping Ctrl and Gui
 #define CTL_A LCTL_T(KC_A)
 #define GUI_D LGUI_T(KC_D)
 #define GUI_K RGUI_T(KC_K)
 #define CTL_SCL RCTL_T(KC_SCLN)
+// Binds for homerow mods on the nav Layer
+#define SFT_DO RSFT_T(KC_DOWN)
+#define GUI_UP RGUI_T(KC_UP)
+#define ALT_RI RALT_T(KC_RGHT)
 
 // Do we even need this?
 enum custom_keycodes {
@@ -67,14 +71,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                    ┌────────┬────────┬────────┬────────┬────────┬────────┐
       KC_GRV ,  KC_1  ,  KC_2  ,  KC_3  ,  KC_4  ,  KC_5  ,                       KC_6  ,  KC_7  ,  KC_8  ,  KC_9  ,  KC_0  ,KC_MINS ,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                    ├────────┼────────┼────────┼────────┼────────┼────────┤
-     _______ ,KC_LCTL ,KC_LALT ,KC_LGUI ,KC_LSFT ,_______ ,                     KC_LEFT ,KC_DOWN , KC_UP  ,KC_RGHT ,_______ ,_______ ,
+     _______ ,KC_LCTL ,KC_LALT ,KC_LGUI ,KC_LSFT ,_______ ,                     KC_LEFT , SFT_DO , GUI_UP , ALT_RI ,_______ ,_______ ,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                    ├────────┼────────┼────────┼────────┼────────┼────────┤
      _______ ,G(KC_Z) ,G(KC_X) ,G(KC_C) ,G(KC_V) ,_______ ,                     KC_HOME ,KC_PGDN ,KC_PGUP , KC_END ,_______ ,_______ ,
   //└────────┴────────┴────────┴────────┼────────┼────────┼────────┐  ┌────────┼────────┼────────┼────────┴────────┴────────┴────────┘
                                          _______ ,_______ ,_______ ,   _______ ,MO(_L3) ,_______
                                       //└────────┴────────┴────────┘  └────────┴────────┴────────┘
-  ),
 
+    ),
     [_L2] = LAYOUT_split_3x6_3(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                    ┌────────┬────────┬────────┬────────┬────────┬────────┐
      _______ ,_______ ,KC_UNDS ,KC_PLUS ,KC_LBRC ,KC_RBRC ,                     KC_BTN1 ,KC_BTN2 ,KC_BTN3 ,KC_BTN4 ,KC_SLSH ,_______ ,
