@@ -22,8 +22,5 @@
 // Tapping time for mod-tap
 #define TAPPING_TERM 200
 
-// Prevent normal rollover on alphas from accidentally triggering mods (Home row mods)
-#define IGNORE_MOD_TAP_INTERRUPT
-
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat (Home row mods)
 #define TAPPING_FORCE_HOLD_PER_KEY
